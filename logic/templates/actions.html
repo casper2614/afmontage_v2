@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Trailer {{ trailer.id }}{% endblock %}
+
+{% block body %}
+    <h1>Trailer {{ trailer.id }}</h1>
+    <p>{{ trailer.description }}</p>
+
+    {% if action_list %}
+    {% for action in action_list %}
+    <a href="{% url 'action_list'}">{{ action.description }}</a>
+    <br>
+    {% endfor %}
+    {% else %}
+    <p>There are no actions assigned to this trailer.</p>
+    {% endif %}
+{% endblock %}
