@@ -29,7 +29,7 @@ De website is nu bereikbaar op: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Licentie
 
-Deze software is gelicenseerd onder de **GNU General Public License v3.0 (GPLv3)**. De volledige licentie vind je in het bestand [`LICENSE.md`](./LICENSE.md).
+Deze software is gelicenseerd onder de **GNU General Public License v3.0 (GPLv3)**. De volledige licentie vind je in het bestand [`LICENSE`](./LICENSE).
 
 ## Auteurs
 
