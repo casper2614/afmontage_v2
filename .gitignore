@@ -1,0 +1,9 @@
+.venv
+
+afmontage/__pycache__
+logic/__pycache__
+
+logic/migrations/*
+!logic/migrations/__init__.py
+
+db.sqlite3
