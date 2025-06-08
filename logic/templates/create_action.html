@@ -23,7 +23,7 @@
         </label><br>
 
         <div id="with-loose-cont" style="display: none;">
-            <p>Is het onderdeel geleverd?</p>
+            <p>Is het onderdeel aanwezig?</p>
             <label>
                 <input type="radio" name="delivered" value="true" required onclick="document.getElementById('contact-cont').style.display = 'none';document.getElementById('delivered-cont').style.display = 'block';document.getElementById('who_contacted').required = false;document.getElementById('result_contact').required = false;document.getElementById('delivery_date').required = false;"> Ja
             </label><br>
@@ -34,7 +34,7 @@
             <div id='delivered-cont' style="display: none;">
                 <p>Is het onderdeel in correcte hoeveelheid aanwezig?</p>
                 <label>
-                    <input type="radio" name="correct_amount" value="true" required onclick="document.getElementById('contact-cont').style.display = 'none';document.getElementById('location-cont').style.display = 'block';"> Ja
+                    <input type="radio" name="correct_amount" value="true" onclick="document.getElementById('contact-cont').style.display = 'none';document.getElementById('location-cont').style.display = 'block';"> Ja
                 </label><br>
                 <label>
                     <input type="radio" name="correct_amount" value="false" onclick="document.getElementById('contact-cont').style.display = 'block';document.getElementById('location-cont').style.display = 'block';document.getElementById('who_contacted').required = true;document.getElementById('result_contact').required = true;document.getElementById('delivery_date').required = true;"> Nee
@@ -62,7 +62,7 @@
             </div>
         </div>
         
-        <br><label for="description">Welke bewerking moet er worden gedaan:</label><br>
+        <br><label for="description">Welke bewerking moet er worden gedaan door trailer compleet:</label><br>
         <textarea name="description" id="description" required></textarea><br><br>
 
         <label for="reason">Geef de reden waarom de bewerking in trailer compleet plaats moet vinden ipv de afmontage:</label><br>
