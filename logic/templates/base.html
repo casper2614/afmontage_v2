@@ -7,6 +7,8 @@
 </head>
 <body>
     <nav style="text-align: end;">
+        <a href="{% url 'create_trailer' %}">Nieuwe trailer</a>
+        <a href="{% url 'create_action' %}">Nieuw restpunt</a>
         <a href="{% url 'index' %}">Home</a>
     </nav>
     {% block body %}{% endblock %}

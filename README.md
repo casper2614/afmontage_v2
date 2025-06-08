@@ -26,8 +26,3 @@ python manage.py runserver 8000
 ```
 
 De website is nu bereikbaar op: [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
-## Auteurs
-
-- **Casper Janssen** [@casper2614](https://www.github.com/casper2614)  
-- **Wessel Janssen**

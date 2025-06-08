@@ -5,13 +5,13 @@
 {% block body %}
     <h1>Trailer {{ trailer.id }}</h1>
     <p>{{ trailer.description }}</p>
-
-    {% if action_list %}
-    {% for action in action_list %}
-    <a href="{% url 'action_list'}">{{ action.description }}</a>
-    <br>
-    {% endfor %}
-    {% else %}
-    <p>There are no actions assigned to this trailer.</p>
-    {% endif %}
+    <ul>
+        {% if action_list %}
+        {% for action in action_list %}
+        <li><a href="{% url 'action' action.trailer_id action.id %}">{{ action.id }} - {{ action.summary }}</a></li>
+        {% endfor %}
+        {% else %}
+        <p>Er zijn geen restpunten geregisteerd op deze trailer.</p>
+        {% endif %}
+    </ul>
 {% endblock %}

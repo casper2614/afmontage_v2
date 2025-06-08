@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}{{ action.summary }} - Trailer {{ action.trailer_id }}{% endblock %}
+
+{% block body %}
+    <h1>{{ action.summary }} - Trailer {{ action.trailer_id }}</h1>
+
+    {% if action.is_component_detached %}
+        <p>Het gaat om een restpunt met los onderdeel.</p>
+    {% else %}
+        <p>Het haat om een restpunt zonder los onderdeel.</p>
+    {% endif %}
+
+    <p>Is het onderdeel aanwezig: {% if action.is_component_delivered %}Ja{% else %}Nee{% endif%}</p>
+
+    {% if action.is_component_correct_amount %}
+        <p>Het onderdeel is beschikbaar in correcte hoeveelheid.</p>
+    {% endif %}
+
+    {% if action.who_contacted %}
+        <p>Wie is gecontacteerd: {{ action.who_contacted }}</p>
+    {% endif %}
+
+    {% if action.result_contact %}
+        <p>Resultaat van contact: {{ action.result_contact }}</p>
+    {% endif %}
+
+    {% if action.expected_delivery_date %}
+        <p>Verwachte leverings datum : {{ action.expected_delivery_date|date:"d-m-Y" }}</p>
+    {% endif %}
+
+    {% if action.location_component %}
+        <p>Locatie van onderdeel: {{ action.get_location_component_display }}</p>
+    {% endif %}
+
+    {% if action.description_of_action %}
+        <p>Beschrijving van handeling: {{ action.description_of_action }}</p>
+    {% endif %}
+
+    {% if action.reason_action %}
+        <p>Reden waarom handeling in hall 4 plaats moet vinden: {{ action.reason_action }}</p>
+    {% endif %}
+
+    {% if action.name_creator_action %}
+        <p>Naam melder van restpunt: {{ action.name_creator_action }}
+    {% endif %}
+
+    {% if action.extra_info_action %}
+        <p>Aanvullende informatie: {{ action.extra_info_action }}
+    {% endif %}
+{% endblock%}

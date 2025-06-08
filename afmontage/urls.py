@@ -1,5 +1,3 @@
-# Casper Janssen, Wessel Janssen © 2025
-# Alle rechten voorbehouden.
 """
 URL configuration for afmontage project.
 
