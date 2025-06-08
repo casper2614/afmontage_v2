@@ -21,7 +21,7 @@ class Action(models.Model):
 
     is_component_detached = models.BooleanField('Het gaat om een restpunt met los onderdeel', default=False)
     is_component_delivered = models.BooleanField('Het onderdeel is geleverd', default=False)
-    is_component_correct_amount = models.BooleanField('Het onderdeel is beschikbaar in correcte hoeveelheid', default=False)
+    is_component_correct_amount = models.BooleanField('Het onderdeel is beschikbaar in benodigde hoeveelheid', default=False)
 
     who_contacted = models.CharField('Wie is gecontacteerd?', max_length=64)
     result_contact = models.CharField('Resultaat van contact', max_length=256)
@@ -30,7 +30,7 @@ class Action(models.Model):
     location_component = models.CharField(choices=LOCATIONS, max_length=1)
 
     description_of_action = models.TextField('Beschrijving van handeling', null=False)
-    reason_action = models.TextField('Reden waarom handeling in hall 4 plaats moet vinden', null=False)
+    reason_action = models.TextField('Reden waarom handeling in hal 4 plaats moet vinden', null=False)
     name_creator_action = models.CharField('Naam melder van restpunt', max_length=64, null=False)
     extra_info_action = models.TextField('Aanvullende informatie', null=False)
 

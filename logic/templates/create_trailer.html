@@ -8,9 +8,9 @@
     <form action="/maak/trailer/" method="post">
         {% csrf_token %}
         <label for="id">Trailer nummer:</label><br>
-        <input type="text" name="id" required maxlength="16"><br>
+        <input type="text" name="id" required maxlength="16"><br><br>
         <label for="description">Beschrijving:</label><br>
-        <input type="text" name="description" required maxlength="256"><br>
+        <input type="text" name="description" required maxlength="256"><br><br>
         <input type="submit" value="Verstuur" name="submit">
     </form>
 {% endblock %}

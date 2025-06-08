@@ -8,13 +8,13 @@
     {% if action.is_component_detached %}
         <p>Het gaat om een restpunt met los onderdeel.</p>
     {% else %}
-        <p>Het haat om een restpunt zonder los onderdeel.</p>
+        <p>Het gaat om een restpunt zonder los onderdeel.</p>
     {% endif %}
 
     <p>Is het onderdeel aanwezig: {% if action.is_component_delivered %}Ja{% else %}Nee{% endif%}</p>
 
     {% if action.is_component_correct_amount %}
-        <p>Het onderdeel is beschikbaar in correcte hoeveelheid.</p>
+        <p>Het onderdeel is aanwezig in benogdigde hoeveelheid.</p>
     {% endif %}
 
     {% if action.who_contacted %}
@@ -26,7 +26,7 @@
     {% endif %}
 
     {% if action.expected_delivery_date %}
-        <p>Verwachte leverings datum : {{ action.expected_delivery_date|date:"d-m-Y" }}</p>
+        <p>Verwachte leveringsdatum : {{ action.expected_delivery_date|date:"d-m-Y" }}</p>
     {% endif %}
 
     {% if action.location_component %}
@@ -38,7 +38,7 @@
     {% endif %}
 
     {% if action.reason_action %}
-        <p>Reden waarom handeling in hall 4 plaats moet vinden: {{ action.reason_action }}</p>
+        <p>Reden waarom handeling in hal 4 plaats moet vinden: {{ action.reason_action }}</p>
     {% endif %}
 
     {% if action.name_creator_action %}
