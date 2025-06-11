@@ -16,7 +16,7 @@
 
         <p>Gaat het om een restpunt met of zonder los onderdeel?</p>
         <label>
-            <input type="radio" name="detached" value="true" required onclick="document.getElementById('with-loose-cont').style.display = 'block';"> Met los onderdeel
+            <input type="radio" name="detached" value="true" onclick="document.getElementById('with-loose-cont').style.display = 'block';"> Met los onderdeel
         </label><br>
         <label>
             <input type="radio" name="detached" value="false" onclick="document.getElementById('with-loose-cont').style.display = 'none';"> Zonder los onderdeel
@@ -25,7 +25,7 @@
         <div id="with-loose-cont" style="display: none;">
             <p>Is het onderdeel aanwezig?</p>
             <label>
-                <input type="radio" name="delivered" value="true" required onclick="document.getElementById('contact-cont').style.display = 'none';document.getElementById('delivered-cont').style.display = 'block';document.getElementById('who_contacted').required = false;document.getElementById('result_contact').required = false;document.getElementById('delivery_date').required = false;"> Ja
+                <input type="radio" name="delivered" value="true" onclick="document.getElementById('contact-cont').style.display = 'none';document.getElementById('delivered-cont').style.display = 'block';document.getElementById('who_contacted').required = false;document.getElementById('result_contact').required = false;document.getElementById('delivery_date').required = false;"> Ja
             </label><br>
             <label>
                 <input type="radio" name="delivered" value="false" onclick="document.getElementById('contact-cont').style.display = 'block';document.getElementById('delivered-cont').style.display = 'none';document.getElementById('location-cont').style.display = 'none';document.getElementById('who_contacted').required = true;document.getElementById('result_contact').required = true;document.getElementById('delivery_date').required = true;"> Nee
@@ -43,18 +43,18 @@
 
             <div id="contact-cont" style="display: none;">
                 <label for="who_contacted">Wie is gecontacteerd?</label>
-                <input type="text" name="who_contacted" id="who_contacted" maxlength="64" required><br><br>
+                <input type="text" name="who_contacted" id="who_contacted" maxlength="64" ><br><br>
 
                 <label for="result_contact">Wat is de uitkomst van dit contact:</label>
-                <input type="text" name="result_contact" id="result_contact" maxlength="256" required><br><br>
+                <input type="text" name="result_contact" id="result_contact" maxlength="256"><br><br>
 
                 <label for="delivery_date">Wat is de verwachte leveringsdatum:</label>
-                <input type="date" name="delivery_date" id="delivery_date" required><br><br>
+                <input type="date" name="delivery_date" id="delivery_date"><br><br>
             </div>
             
             <div id="location-cont" style="display: none;">
                 <label for="location">Wat is de locatie van het onderdeel:</label>
-                <select name="location" id="location" required>
+                <select name="location" id="location">
                     <option value="T">Op de trailer</option>
                     <option value="P">In de restpuntenpallet</option>
                     <option value="N">Nvt.</option>
